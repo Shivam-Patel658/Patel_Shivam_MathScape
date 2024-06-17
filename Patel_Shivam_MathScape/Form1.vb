@@ -26,12 +26,13 @@
 
 
 
-Imports System.IO
 Imports System.Media
+Imports System.Reflection
 Imports System.Resources
 Imports System.Runtime.CompilerServices
 Imports System.Windows.Media
-Imports System.Reflection
+Imports System.Drawing
+Imports Color = System.Drawing.Color
 
 Module ControlExtensions
 
@@ -64,22 +65,18 @@ Public Class frmMain
 
     Private tempFilePath As String
 
+    Dim sizeAddend As Integer
+
+
     Sub PlayMusic(ByVal resourceFile As Object, ByVal resourceName As String)
-        ' Create a new SoundPlayer
+
         Dim soundPlayer As New SoundPlayer()
 
-        ' Retrieve the resource stream using the specified resource file and resource name
         Dim resourceManager = resourceFile.ResourceManager
         Dim resourceStream As IO.Stream = resourceManager.GetStream(resourceName)
 
-        If resourceStream IsNot Nothing Then
-            ' Assign the stream to the SoundPlayer
-            soundPlayer.Stream = resourceStream        ' Play the sound
-            soundPlayer.Play()
-        Else
-            ' Handle the case where the resource is not found
-            Throw New Exception("Resource not found: " & resourceName)
-        End If
+        soundPlayer.Stream = resourceStream        '
+        soundPlayer.Play()
 
     End Sub
 
@@ -105,43 +102,20 @@ Public Class frmMain
 
     'Game intro (first thing when game is opened)
 
-    Sub PlaySound(ByVal resourceFileName As String, ByVal resourceName As String)
-        ' Create a new SoundPlayer
+    Sub PlaySound(resourceFileName As String,resourceName As String)
+
         Dim soundPlayer As New SoundPlayer()
-
-        ' Use reflection to get the ResourceManager from the specified resource file name
         Dim resourceManager As ResourceManager
-        Try
-            ' Get the type of the resource file from the assembly
-            Dim resourceFileType As Type = Assembly.GetExecutingAssembly().GetType("Patel_Shivam_MathScape.My.Resources." & resourceFileName)
-            If resourceFileType Is Nothing Then
-                Throw New Exception("Resource file not found: " & resourceFileName)
-            End If
+        Dim resourceFileType As Type = Assembly.GetExecutingAssembly().GetType("Patel_Shivam_MathScape.My.Resources." & resourceFileName)
 
-            ' Get the ResourceManager property from the resource file type
-            Dim resourceManagerProperty As PropertyInfo = resourceFileType.GetProperty("ResourceManager", BindingFlags.Static Or BindingFlags.NonPublic)
-            If resourceManagerProperty Is Nothing Then
-                Throw New Exception("ResourceManager property not found in resource file: " & resourceFileName)
-            End If
+        Dim resourceManagerProperty As PropertyInfo = resourceFileType.GetProperty("ResourceManager", BindingFlags.Static Or BindingFlags.NonPublic)
 
-            ' Get the ResourceManager instance
-            resourceManager = CType(resourceManagerProperty.GetValue(Nothing, Nothing), ResourceManager)
-        Catch ex As Exception
-            Throw New Exception("Failed to get ResourceManager for resource file: " & resourceFileName, ex)
-        End Try
+        resourceManager = CType(resourceManagerProperty.GetValue(Nothing, Nothing), ResourceManager)
 
-        ' Retrieve the resource stream using the resource manager and resource name
         Dim resourceStream As IO.Stream = resourceManager.GetStream(resourceName)
 
-        If resourceStream IsNot Nothing Then
-            ' Assign the stream to the SoundPlayer
-            soundPlayer.Stream = resourceStream
-            ' Play the sound
-            soundPlayer.Play()
-        Else
-            ' Handle the case where the resource is not found
-            Throw New Exception("Resource not found: " & resourceName)
-        End If
+        soundPlayer.Stream = resourceStream
+        soundPlayer.Play()
 
     End Sub
 
@@ -182,6 +156,7 @@ Public Class frmMain
 
         'PlaySound("Audio", "Main_Menu_Theme")
 
+        bgmPlayer.Play()
 
     End Sub
 
@@ -195,6 +170,7 @@ Public Class frmMain
 
 
     End Sub
+
 
 
     Private Sub Label_Click(sender As Object, e As EventArgs) Handles lblPlay.Click, lblHelp.Click, lblOptions.Click
@@ -261,6 +237,7 @@ Public Class frmMain
 
         End If
 
+
     End Sub
 
 
@@ -276,21 +253,54 @@ Public Class frmMain
         Select Case strParentName
 
             Case "pnlPlay"
-                pnlPlay.Hide()
-                pnlPlay.Controls.Remove(lblBack)
+                lblBack.Parent.Hide()
+                lblBack.Parent = Nothing
+
 
             Case "pnlHelp"
-                pnlHelp.Hide()
-                pnlHelp.Controls.Remove(lblBack)
+                lblBack.Parent.Hide()
+                lblBack.Parent = Nothing
+
 
             Case "pnlOptions"
-                pnlOptions.Hide()
-                pnlOptions.Controls.Remove(lblBack)
+                lblBack.Parent.Hide()
+                lblBack.Parent = Nothing
 
         End Select
 
         strParentName = Nothing
 
     End Sub
+
+    Private Sub label_MouseEnter(sender As Object, e As EventArgs) Handles _
+        lblPlay.MouseEnter, lblHelp.MouseEnter, lblOptions.MouseEnter
+
+        Dim label As Label = CType(sender, Label)
+        sizeAddend = 10
+
+        label.BackColor = Color.White
+        label.ForeColor = Color.Black
+        label.Font = New Font(label.Font.FontFamily, 85.0F, label.Font.Style)
+
+        label.Size = New Size(label.Width + sizeAddend, label.Height + sizeAddend)
+        label.Location = New Point(label.Location.X - sizeAddend / 2, label.Location.Y - sizeAddend / 2)
+
+
+    End Sub
+
+    Private Sub label_MouseLeave(sender As Object, e As EventArgs) Handles _
+        lblPlay.MouseLeave, lblHelp.MouseLeave, lblOptions.MouseLeave
+
+        Dim label As Label = CType(sender, Label)
+
+        label.BackColor = Color.Transparent
+        label.ForeColor = Color.White
+        label.Font = New Font(label.Font.FontFamily, 72.0F, label.Font.Style)
+
+        label.Size = New Size(label.Width - sizeAddend, label.Height - sizeAddend)
+        label.Location = New Point(label.Location.X + sizeAddend / 2, label.Location.Y + sizeAddend / 2)
+
+    End Sub
+
 
 End Class

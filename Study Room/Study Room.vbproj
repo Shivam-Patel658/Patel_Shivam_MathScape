@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43D5103E-4D9E-40A1-A233-5B2D906282CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Study_Room.My.MyApplication</StartupObject>
+    <RootNamespace>Study_Room</RootNamespace>
+    <AssemblyName>Study Room</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Study Room.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Study Room.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animals.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Animals.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BGM.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BGM.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Books.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Books.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Containers.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Containers.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipement.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Equipement.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Other.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Other.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RealisticFX.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RealisticFX.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Room.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Room.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SFX.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFX.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Animals.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Animals.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BGM.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BGM.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Books.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Containers.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Containers.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipement.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Equipement.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Other.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealisticFX.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RealisticFX.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Room.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SFX.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SFX.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase-side-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe-normal-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe-normal-open-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage-box-323635.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste-basket-b50000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase-front-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase-front-open-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-bd8d51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-open-bd8d51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope-open-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pouch-small-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books-random-v-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books-lying-down-v-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-note-v-text-eae541.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteboard-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-761d10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-horizontal-6b482b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-open-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-open-v-text-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiny-tiles-marble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-targeted-shine-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROOM 1 PIC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brick-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door-flush-open-v-2-shelves-35ce5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-holder-764928.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage-unit-3-shelves-hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\storage-unit-4-shelves-764928.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door-flush-35ce5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lamp-ceiling-0d83db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-bulb-reversed-on-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch-off-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch-on-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flashlight-2-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screwdriver-default %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screwdriver-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheese-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile-phone-v-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile-phone-v-lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mug-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screw-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table-side-764928.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slotted-screw-fastened-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-crumpled-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balloon-deflated-35ce5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bone-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple-with-worm-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-symbol-marker-question-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-symbol-marker-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-7-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-5-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candy-small-35ce5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-reader-00ff00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-digital-3-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile-phone-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room-escape-maker-logo-60-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteboard-eraser-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brick-hole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brick-side-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-35ce5c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card-reader-ff0000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-digital-1-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-digital-5-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-1-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-2-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-3-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-3-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-4-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-6-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-7-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-number-marker-9-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-symbol-marker-multiple-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char-symbol-marker-percent-ffffff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet-bowl-filled-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse-standing-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bird-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-eating-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-angry-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog-eating-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog-sleep-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish-bowl-default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FLIPPED Books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Briefcase F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azaleh - Rainy Nights.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-failure.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-enter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-request.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui-skip.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-use.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui-move.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-grab.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-release.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-success.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item-add.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-start.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-success.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-pause.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-show.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crumping-paper-109585.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-pages-book-book-sheets-10762_WZNxw2Xm.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

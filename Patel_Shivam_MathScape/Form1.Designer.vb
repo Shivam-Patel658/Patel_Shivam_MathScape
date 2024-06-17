@@ -42,6 +42,7 @@ Partial Class frmMain
         Me.pbTextLogoWhite = New System.Windows.Forms.PictureBox()
         Me.tmrAnimation = New System.Windows.Forms.Timer(Me.components)
         Me.tmrLoading = New System.Windows.Forms.Timer(Me.components)
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.pnlPlay.SuspendLayout()
         Me.pnlLoadingScreen.SuspendLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +52,7 @@ Partial Class frmMain
         Me.pnlMain.SuspendLayout()
         CType(Me.pbKey, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbTextLogoWhite, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlOptions
@@ -169,47 +171,47 @@ Partial Class frmMain
         Me.pnlMain.Controls.Add(Me.pbKey)
         Me.pnlMain.Controls.Add(Me.pbTextLogoWhite)
         Me.pnlMain.ForeColor = System.Drawing.Color.White
-        Me.pnlMain.Location = New System.Drawing.Point(12, 117)
+        Me.pnlMain.Location = New System.Drawing.Point(0, 0)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(30, 30)
+        Me.pnlMain.Size = New System.Drawing.Size(1600, 900)
         Me.pnlMain.TabIndex = 16
         Me.pnlMain.Visible = False
         '
         'lblOptions
         '
-        Me.lblOptions.AutoSize = True
         Me.lblOptions.BackColor = System.Drawing.Color.Transparent
         Me.lblOptions.Font = New System.Drawing.Font("MARIO Font v3_2 Solid", 71.99999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOptions.ForeColor = System.Drawing.Color.White
-        Me.lblOptions.Location = New System.Drawing.Point(576, 750)
+        Me.lblOptions.Location = New System.Drawing.Point(485, 750)
         Me.lblOptions.Name = "lblOptions"
-        Me.lblOptions.Size = New System.Drawing.Size(472, 124)
+        Me.lblOptions.Size = New System.Drawing.Size(630, 124)
         Me.lblOptions.TabIndex = 9
-        Me.lblOptions.Text = "Options"
+        Me.lblOptions.Text = "OPTIONS"
+        Me.lblOptions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblHelp
         '
-        Me.lblHelp.AutoSize = True
         Me.lblHelp.BackColor = System.Drawing.Color.Transparent
         Me.lblHelp.Font = New System.Drawing.Font("MARIO Font v3_2 Solid", 71.99999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHelp.ForeColor = System.Drawing.Color.White
-        Me.lblHelp.Location = New System.Drawing.Point(659, 588)
+        Me.lblHelp.Location = New System.Drawing.Point(485, 588)
         Me.lblHelp.Name = "lblHelp"
-        Me.lblHelp.Size = New System.Drawing.Size(299, 124)
+        Me.lblHelp.Size = New System.Drawing.Size(630, 124)
         Me.lblHelp.TabIndex = 8
-        Me.lblHelp.Text = "Help"
+        Me.lblHelp.Text = "HELP"
+        Me.lblHelp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblPlay
         '
-        Me.lblPlay.AutoSize = True
         Me.lblPlay.BackColor = System.Drawing.Color.Transparent
         Me.lblPlay.Font = New System.Drawing.Font("MARIO Font v3_2 Solid", 71.99999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPlay.ForeColor = System.Drawing.Color.White
-        Me.lblPlay.Location = New System.Drawing.Point(659, 410)
+        Me.lblPlay.Location = New System.Drawing.Point(485, 410)
         Me.lblPlay.Name = "lblPlay"
-        Me.lblPlay.Size = New System.Drawing.Size(284, 124)
+        Me.lblPlay.Size = New System.Drawing.Size(630, 124)
         Me.lblPlay.TabIndex = 7
-        Me.lblPlay.Text = "Play"
+        Me.lblPlay.Text = "PLAY"
+        Me.lblPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pbKey
         '
@@ -253,6 +255,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.pnlLoadingScreen)
         Me.Controls.Add(Me.pnlIntro)
         Me.Controls.Add(Me.pnlMain)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -265,9 +268,9 @@ Partial Class frmMain
         Me.pnlIntro.ResumeLayout(False)
         CType(Me.pbIntro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlMain.ResumeLayout(False)
-        Me.pnlMain.PerformLayout()
         CType(Me.pbKey, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbTextLogoWhite, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -291,4 +294,5 @@ Partial Class frmMain
     Friend WithEvents pbTextLogoWhite As PictureBox
     Friend WithEvents tmrAnimation As Timer
     Friend WithEvents tmrLoading As Timer
+    Friend WithEvents BindingSource1 As BindingSource
 End Class
