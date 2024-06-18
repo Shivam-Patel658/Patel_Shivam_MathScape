@@ -117,10 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tmrSound.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="tmrEscape.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>123, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbKeycard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADwAAAAUCAYAAADRA14pAAAABGdBTUEAALGPC/xhBQAAAz1JREFUWEft
+        VWlIVFEU9kf0I8is0FIiy9TI1Fxn3AIt29xzmRzXckuxXIrECAz7ESGREUQL8UAqiLCCoiBI0aDUceaN
+        M+MWmhqOmFq0WCmWfZ17e4aYv0rx/fAbPt69582cc793vvPGYhGLWMQiGHzFlDhiNbGKKMwRWS6WM04q
+        Iw941iYk+BnS4S0mwbphJzZqIuClS4J9UxhWvwyBbcNueOgS4aZNgKMmCs6aGHjS3qU5Dj5iMhRiKkjU
+        7NSnQNGSClZDKrfw8G5QC56imh/wRM9F5HWdhbv2ACJbC3G67yqKus/DX58OpT4NKR2nENt2nIvdY8yH
+        H8WZ6L+ETqc+FayGVG7hQR0QnDTRiGotwsjEB5x5cx2lPZcwhd6xAag7TqLmgwbVIzW4OfQYd4af4vLA
+        XS6YPZxZhU4jqyGVW3jQgQQ3rYoLZt1d17gX6Z1luD9Si0Odp7GfOhpmOoryvmvw1iXzfUV/FQ60l/6x
+        9VZtPLc9229pjuX7GVaXl2Bm2c00mzYvd0LVXoIIUwHNbzDNcTjNs5rb2b4xjDqaxsXYNuzi66i2Ippn
+        NRfHur3DkMPXU5StYPZCYge7R5Y1felC59dedI/1I7/rHH7Sh1k9urUY3ybHUUJzzua47qMWlebbZGkV
+        dKMdKOu7wmMTP3/gxScDHJoi+MOQpWBmw3Cybd1HHVm7mHfq1tATFHRXQBzt5ML2mY7g4bt6JNOLK+NV
+        OY6/voBQYy639KP39ThK370x+ACfvo/S/jk2aSK5O2QnWGFME5RGetsaUuCij8e2lkS46lXYoIuAh0EN
+        Z3E/X3sakrBOuw/udF9pTINbi4r/htFBF8Xjrnr66xKj4STGwM90EJR7ivIRHGjOEYhgVJozESCt/c1Z
+        xGwpls1jfhRjaxZnnBlnV4U5g1+nckqUj2BLxVqBiHmmfAQT2GEwz5SP4FWh64XlPmtg6TtrZ/6PlJPl
+        Xkk1pHILj4DuLCFk8hgCBw8jaDAXQW/niJSL5WS5/bsy5SN4maNVpVe9CsHjhQgazpv98P/A7ZQreKwQ
+        LDerIZWTBayXWC59ZhVgByt/u9EVStvPc0GWiwjKXUM1bH6X+h9YWPwCckJ/0brDxdoAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <metadata name="tmrExit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>231, 17</value>
   </metadata>
 </root>

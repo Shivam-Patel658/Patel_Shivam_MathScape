@@ -23,12 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.pnlOptions = New System.Windows.Forms.Panel()
-        Me.pnlHelp = New System.Windows.Forms.Panel()
-        Me.pnlPlay = New System.Windows.Forms.Panel()
-        Me.lblLoad = New System.Windows.Forms.Label()
-        Me.lblNewGame = New System.Windows.Forms.Label()
-        Me.lblBack = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.pnlLoadingScreen = New System.Windows.Forms.Panel()
         Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.pbTextLogo = New System.Windows.Forms.PictureBox()
@@ -43,7 +38,6 @@ Partial Class frmMain
         Me.tmrAnimation = New System.Windows.Forms.Timer(Me.components)
         Me.tmrLoading = New System.Windows.Forms.Timer(Me.components)
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.pnlPlay.SuspendLayout()
         Me.pnlLoadingScreen.SuspendLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbTextLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,66 +48,6 @@ Partial Class frmMain
         CType(Me.pbTextLogoWhite, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pnlOptions
-        '
-        Me.pnlOptions.BackColor = System.Drawing.Color.Transparent
-        Me.pnlOptions.Location = New System.Drawing.Point(12, 273)
-        Me.pnlOptions.Name = "pnlOptions"
-        Me.pnlOptions.Size = New System.Drawing.Size(30, 30)
-        Me.pnlOptions.TabIndex = 14
-        '
-        'pnlHelp
-        '
-        Me.pnlHelp.BackColor = System.Drawing.Color.Transparent
-        Me.pnlHelp.Location = New System.Drawing.Point(12, 227)
-        Me.pnlHelp.Name = "pnlHelp"
-        Me.pnlHelp.Size = New System.Drawing.Size(30, 30)
-        Me.pnlHelp.TabIndex = 15
-        '
-        'pnlPlay
-        '
-        Me.pnlPlay.BackColor = System.Drawing.Color.Transparent
-        Me.pnlPlay.Controls.Add(Me.lblLoad)
-        Me.pnlPlay.Controls.Add(Me.lblNewGame)
-        Me.pnlPlay.Controls.Add(Me.lblBack)
-        Me.pnlPlay.Location = New System.Drawing.Point(12, 174)
-        Me.pnlPlay.Name = "pnlPlay"
-        Me.pnlPlay.Size = New System.Drawing.Size(30, 30)
-        Me.pnlPlay.TabIndex = 19
-        '
-        'lblLoad
-        '
-        Me.lblLoad.AutoSize = True
-        Me.lblLoad.Font = New System.Drawing.Font("MARIO Font v3_2 Solid", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblLoad.ForeColor = System.Drawing.Color.White
-        Me.lblLoad.Location = New System.Drawing.Point(1030, 206)
-        Me.lblLoad.Name = "lblLoad"
-        Me.lblLoad.Size = New System.Drawing.Size(219, 83)
-        Me.lblLoad.TabIndex = 2
-        Me.lblLoad.Text = "LOAD"
-        '
-        'lblNewGame
-        '
-        Me.lblNewGame.AutoSize = True
-        Me.lblNewGame.Font = New System.Drawing.Font("MARIO Font v3_2 Solid", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblNewGame.ForeColor = System.Drawing.Color.White
-        Me.lblNewGame.Location = New System.Drawing.Point(166, 206)
-        Me.lblNewGame.Name = "lblNewGame"
-        Me.lblNewGame.Size = New System.Drawing.Size(408, 83)
-        Me.lblNewGame.TabIndex = 1
-        Me.lblNewGame.Text = "NEW GAME"
-        '
-        'lblBack
-        '
-        Me.lblBack.AutoSize = True
-        Me.lblBack.Font = New System.Drawing.Font("MARIO Font v3_2 Solid", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblBack.ForeColor = System.Drawing.Color.White
-        Me.lblBack.Location = New System.Drawing.Point(45, 19)
-        Me.lblBack.Name = "lblBack"
-        Me.lblBack.Size = New System.Drawing.Size(256, 83)
-        Me.lblBack.TabIndex = 0
-        Me.lblBack.Text = "<BACK"
         '
         'pnlLoadingScreen
         '
@@ -171,9 +105,9 @@ Partial Class frmMain
         Me.pnlMain.Controls.Add(Me.pbKey)
         Me.pnlMain.Controls.Add(Me.pbTextLogoWhite)
         Me.pnlMain.ForeColor = System.Drawing.Color.White
-        Me.pnlMain.Location = New System.Drawing.Point(0, 0)
+        Me.pnlMain.Location = New System.Drawing.Point(12, 119)
         Me.pnlMain.Name = "pnlMain"
-        Me.pnlMain.Size = New System.Drawing.Size(1600, 900)
+        Me.pnlMain.Size = New System.Drawing.Size(30, 30)
         Me.pnlMain.TabIndex = 16
         Me.pnlMain.Visible = False
         '
@@ -249,19 +183,15 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1600, 900)
-        Me.Controls.Add(Me.pnlOptions)
-        Me.Controls.Add(Me.pnlHelp)
-        Me.Controls.Add(Me.pnlPlay)
         Me.Controls.Add(Me.pnlLoadingScreen)
         Me.Controls.Add(Me.pnlIntro)
         Me.Controls.Add(Me.pnlMain)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MathScape"
-        Me.pnlPlay.ResumeLayout(False)
-        Me.pnlPlay.PerformLayout()
         Me.pnlLoadingScreen.ResumeLayout(False)
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbTextLogo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -274,13 +204,6 @@ Partial Class frmMain
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents pnlOptions As Panel
-    Friend WithEvents pnlHelp As Panel
-    Friend WithEvents pnlPlay As Panel
-    Friend WithEvents lblLoad As Label
-    Friend WithEvents lblNewGame As Label
-    Friend WithEvents lblBack As Label
     Friend WithEvents pnlLoadingScreen As Panel
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents pbTextLogo As PictureBox

@@ -76,9 +76,27 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         '''</summary>
+        Friend Shared ReadOnly Property crumping_paper() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("crumping_paper", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
         Friend Shared ReadOnly Property crumping_paper_109585() As System.IO.UnmanagedMemoryStream
             Get
                 Return ResourceManager.GetStream("crumping_paper_109585", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend Shared ReadOnly Property Windows_XP_Startup() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Windows_XP_Startup", resourceCulture)
             End Get
         End Property
     End Class

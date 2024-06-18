@@ -214,6 +214,7 @@
     <None Include="Resources\briefcase-side-default.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\MARIO_Font_v3_Solid.ttf" />
     <None Include="Resources\safe-normal-default.png" />
   </ItemGroup>
   <ItemGroup>
@@ -533,6 +534,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book-pages-book-book-sheets-10762_WZNxw2Xm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crumping_paper.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows XP Startup.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

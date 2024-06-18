@@ -67,6 +67,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend Shared ReadOnly Property card_35ce5c() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("card_35ce5c", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend Shared ReadOnly Property flashlight_2_default() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("flashlight_2_default", resourceCulture)

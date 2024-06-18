@@ -159,6 +159,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <EmbeddedResource Include="Resources\MARIO_Font_v3_Solid.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Assets\Graphics\Menus\Brand\TEXT LOGO.png" />
@@ -192,6 +193,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Assets\Audio\Menus\Intro Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Study Room\Study Room.vbproj">
+      <Project>{43d5103e-4d9e-40a1-a233-5b2d906282ce}</Project>
+      <Name>Study Room</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main_Menu_Theme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Menu Theme.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
